@@ -84,8 +84,8 @@ You need some knowledge of Deffie-Hellman key exchange algorithm(DH algorithm) a
     # pull newkeeper-dev v0.3, version: 0.3
     docker pull pschy/newkeeper-dev:<version>
 
-    # run newkeeper with a PORT, PORT: 80
-    docker run -it -d -p `PORT`:8000 --name newkeeper pschy/newkeeper-dev
+    # run newkeeper with a PORT, PORT: 80, version: 0.3
+    docker run -it -d -p `PORT`:8000 --name newkeeper pschy/newkeeper-dev:<version>
 
     # check status and get CONTAINER ID
     docker ps
