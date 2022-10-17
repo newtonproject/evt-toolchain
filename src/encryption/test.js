@@ -79,24 +79,25 @@ module.exports = async function(){
         console.log("Key Register Fail");
         return false;
     }
-    // const paramsKey = {
-    //     key_id: Buffer.from(key_id, "utf-8"),
-    //     prime: Buffer.from(prime, 'utf-8'),
-    //     peer_swap_key: Buffer.from(peer_swap_key, 'utf-8'),
-    //     v: signMessage.v,
-    //     r: signMessage.r,
-    //     s: signMessage.s,
-    //     message: Buffer.from(message, 'utf-8'),
-    // }
-    // const signArrKey = [
-    //     paramsKey.key_id, paramsKey.prime, paramsKey.peer_swap_key,
-    //     paramsKey.v, paramsKey.r, paramsKey.s, paramsKey.message
-    // ];
-    // const signDataKey = '0x' + Buffer.from(RLP.encode(signArrKey)).toString('hex');
-    // const keyResult = await key(signDataKey);
+    const paramsKey = {
+        key_id: Buffer.from(key_id, "utf-8"),
+        prime: Buffer.from(prime, 'utf-8'),
+        peer_swap_key: Buffer.from(pub, 'utf-8'),
+        v: signMessage.v,
+        r: signMessage.r,
+        s: signMessage.s,
+        message: Buffer.from(message, 'utf-8'),
+    }
+    const signArrKey = [
+        paramsKey.key_id, paramsKey.prime, paramsKey.peer_swap_key,
+        paramsKey.v, paramsKey.r, paramsKey.s, paramsKey.message
+    ];
+    const signDataKey = '0x' + Buffer.from(RLP.encode(signArrKey)).toString('hex');
+    const keyResult = await key(signDataKey);
 
-    // if(keyResult) {
-    //     console.log(keyResult);
-    //     return true;
-    // }
+    if(keyResult) {
+        console.log(keyResult);
+        console.log("Get Key Success");
+        return true;
+    }
 }

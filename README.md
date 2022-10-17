@@ -11,6 +11,30 @@ In this toolchain, you can use some simple shell command line to **deploy contra
 2. Get RPC Endpoint and ChainId which you want to try.
 3. Own an Address and PrivateKey
 
+#### **Newton Mainnet：**
+RPC：
+https://global.rpc.mainnet.newtonproject.org
+
+ChainId：
+1012
+
+Block Explorer：
+https://explorer.newtonproject.org
+
+#### **Newton Testnet：**
+
+RPC：
+https://rpc1.newchain.newtonproject.org
+
+ChainId：
+1007
+
+Block Explorer：
+
+https://explorer.testnet.newtonproject.org
+
+http://e.testnet.diynova.com
+
 ### Get source code and Install
     ```bash
 
@@ -20,7 +44,6 @@ In this toolchain, you can use some simple shell command line to **deploy contra
     # create .env file in your project root
     touch .env
     # set new CHAIN_ID, RPC_URL, PRIVATE_KEY in .env file
-
     
     ```
 
@@ -42,7 +65,7 @@ In this toolchain, you can use some simple shell command line to **deploy contra
    2. EVTA
         ```bash
         # mint EVTA. quantity: the amount you want to mint
-        npx evtc evt call mintEVTA quantity
+        npx evtc evt call mintEVTA <quantity>
         # the tokens will be owned by your address
         ```
 
@@ -52,14 +75,16 @@ If you use Newchain testnet configuration, you can see in [Newton Testnet Explor
 
 ### Use EVT Encryption
 
-We provide an open source project `NewKeeper` to combine with EVT Encryption.
+We provide an open source project [`NewKeeper`](https://github.com/newkeeper-core/newkeeper) to combine with EVT Encryption.
+
+You need some knowledge of Deffie-Hellman key exchange algorithm(DH algorithm) and AES encryption to understand newkeeper.
 
 1. Run NewKeeper
     ```bash
-    # pull newkeeper-dev v0.1
-    docker pull pschy/newkeeper-dev
+    # pull newkeeper-dev v0.3, version: 0.3
+    docker pull pschy/newkeeper-dev:<version>
 
-    # run newkeeper with a PORT
+    # run newkeeper with a PORT, PORT: 80
     docker run -it -d -p `PORT`:8000 --name newkeeper pschy/newkeeper-dev
 
     # check status and get CONTAINER ID
@@ -81,19 +106,21 @@ We provide an open source project `NewKeeper` to combine with EVT Encryption.
 3. Call Functions
     ```bash
     # call contract functions with params
-    npx evtc encryption call functions params
+    npx evtc encryption call <functions> <params>
     ```
     Use the shell common line to call Below functions. you can get returns in commander
 
     #### **Functions**
-    - mint_EVT()
-        - desc
-        
-            mint a Token for encryption key register permission.
     - mint_token()
+        - desc
+            
+            mint a Token for encryption key register permission.
+            
+    - mint_EVT()
         - desc
 
             mint a new EVT
+            
     - get_balance()
         - desc
 
@@ -104,7 +131,7 @@ We provide an open source project `NewKeeper` to combine with EVT Encryption.
     - generator()
         - desc
 
-            call Newkeeper to generator KeyId
+            call Newkeeper to generate KeyId
         - returns
 
             peerPrivateKey, keyId, privateKey, peer, prime, peerPublicKey
@@ -170,15 +197,15 @@ It will deploy contracts, mint token and evt, generate key with Newkeeper etc.
     npx evtc variable call mint
 
     # Add a Property. like: height, with, age. etc.
-    npx evtc variable call addProperty propertyName
+    npx evtc variable call addProperty <propertyName>
 
     # Set Property to a EVT
     # ex.: npx evtc variable call setProperty 0 age 30
-    npx evtc variable call setProperty tokenId propertyName propertyValue
+    npx evtc variable call setProperty <tokenId> propertyName propertyValue
 
     # Get Property
     # ex.: npx evtc variable call getProperty 0 age
-    npx evtc variable call getProperty tokenId propertyName
+    npx evtc variable call getProperty <tokenId> <propertyName>
     ```
 
 ## Reference
