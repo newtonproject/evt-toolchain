@@ -201,7 +201,7 @@ It will deploy contracts, mint token and evt, generate key with Newkeeper etc.
 
     # Set Property to a EVT
     # ex.: npx evtc variable call setProperty 0 age 30
-    npx evtc variable call setProperty <tokenId> propertyName propertyValue
+    npx evtc variable call setProperty <tokenId> <propertyName> <propertyValue>
 
     # Get Property
     # ex.: npx evtc variable call getProperty 0 age
