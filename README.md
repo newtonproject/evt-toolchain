@@ -11,6 +11,31 @@ In this toolchain, you can use some simple shell command line to **deploy contra
 2. Get RPC Endpoint and ChainId which you want to try.
 3. Own an Address and PrivateKey
 
+#### **Newton Mainnet：**
+
+**RPC：**
+https://global.rpc.mainnet.newtonproject.org
+
+**ChainId：**
+1012
+
+**Block Explorer：**
+https://explorer.newtonproject.org
+
+#### **Newton Testnet：**
+
+**RPC：**
+https://rpc1.newchain.newtonproject.org
+
+**ChainId：**
+1007
+
+**Block Explorer：**
+
+https://explorer.testnet.newtonproject.org
+
+http://e.testnet.diynova.com
+
 ### Get source code and Install
     ```bash
 
@@ -56,10 +81,10 @@ We provide an open source project `NewKeeper` to combine with EVT Encryption.
 
 1. Run NewKeeper
     ```bash
-    # pull newkeeper-dev v0.1
-    docker pull pschy/newkeeper-dev
+    # pull newkeeper-dev v0.3, version: 0.3
+    docker pull pschy/newkeeper-dev:[version]
 
-    # run newkeeper with a PORT
+    # run newkeeper with a PORT, PORT: 80
     docker run -it -d -p `PORT`:8000 --name newkeeper pschy/newkeeper-dev
 
     # check status and get CONTAINER ID
@@ -104,7 +129,7 @@ We provide an open source project `NewKeeper` to combine with EVT Encryption.
     - generator()
         - desc
 
-            call Newkeeper to generator KeyId
+            call Newkeeper to generate KeyId
         - returns
 
             peerPrivateKey, keyId, privateKey, peer, prime, peerPublicKey
