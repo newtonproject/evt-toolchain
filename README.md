@@ -39,7 +39,7 @@ http://e.testnet.diynova.com
     ```bash
 
     # install evt-toolchain
-    npm install evt-toolchain -D
+    npm install @newton-protocol/evt-toolchain
 
     # create .env file in your project root
     touch .env

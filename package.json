@@ -1,17 +1,21 @@
 {
-  "name": "evt-toolchain",
-  "version": "0.0.3",
+  "name": "@newton-protocol/evt-toolchain",
+  "version": "0.1.2",
   "description": "EVT toolchain",
+  "bin": {
+    "evtc": "bin/cli.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/newtonproject/evt-toolchain.git"
+    
   },
-  "bin": {
-    "evtc": "bin/cli.js"
-  },
+  "keywords": [
+    "EVT toolchain", "EVT"
+  ],
   "author": "Jonny <february18th@hotmail.com>",
   "license": "GPLv3",
   "bugs": {
