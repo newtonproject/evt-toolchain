@@ -1,33 +1,32 @@
 {
-    "name": "evt-toolchain",
-    "version": "0.0.2",
-    "description": "EVT toolchain",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/newtonproject/evt-toolchain.git"
-    },
-    "bin": {
-      "evtc": "bin/cli.js"
-    },
-    "author": "Jonny <february18th@hotmail.com>",
-    "license": "GPLv3",
-    "bugs": {
-      "url": "https://github.com/newtonproject/evt-toolchain/issues"
-    },
-    "homepage": "https://github.com/newtonproject/evt-toolchain#readme",
-    "dependencies": {
-        "axios": "^0.27.2",
-        "dotenv": "^16.0.2",
-        "elliptic": "^6.5.4",
-        "ethers": "^5.7.0",
-        "fs": "^0.0.1-security",
-        "mock-require": "^3.0.3",
-        "path": "^0.12.7",
-        "rlp": "^3.0.0",
-        "solc": "^0.8.4"
-      }
+  "name": "evt-toolchain",
+  "version": "0.0.3",
+  "description": "EVT toolchain",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newtonproject/evt-toolchain.git"
+  },
+  "bin": {
+    "evtc": "bin/cli.js"
+  },
+  "author": "Jonny <february18th@hotmail.com>",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/newtonproject/evt-toolchain/issues"
+  },
+  "homepage": "https://github.com/newtonproject/evt-toolchain#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.2",
+    "elliptic": "^6.5.4",
+    "ethers": "^5.7.0",
+    "fs": "^0.0.1-security",
+    "mock-require": "^3.0.3",
+    "path": "^0.12.7",
+    "rlp": "^3.0.0",
+    "solc": "^0.8.4"
   }
-  
+}
