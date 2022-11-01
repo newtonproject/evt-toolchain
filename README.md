@@ -93,7 +93,7 @@ You need some knowledge of Deffie-Hellman key exchange algorithm(DH algorithm) a
     # show logs
     docker logs -f `CONTAINER ID`
 
-    # set NEWKEEPER url in .env file 
+    # set NEWKEEPER url in .env file, for example: NEWKEEPER="http://127.0.0.1:`PORT`/"(PORT: Your Local Port)
     ```
 
 2. Deploy Contract
