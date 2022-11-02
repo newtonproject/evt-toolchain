@@ -35,17 +35,15 @@ https://explorer.testnet.newtonproject.org
 
 http://e.testnet.diynova.com
 
-### Get source code and Install
-    ```bash
+### Get source code and Install 
+```bash
+# install evt-toolchain
+npm install @newton-protocol/evt-toolchain
 
-    # install evt-toolchain
-    npm install @newton-protocol/evt-toolchain
-
-    # create .env file in your project root
-    touch .env
-    # set new CHAIN_ID, RPC_URL, PRIVATE_KEY in .env file
-    
-    ```
+# create .env file in your project root
+touch .env
+# set new CHAIN_ID, RPC_URL, PRIVATE_KEY in .env file
+```
 
 ### Use EVT and EVTA
 1. Deploy Contract
@@ -55,7 +53,6 @@ http://e.testnet.diynova.com
 2. Create
    1. EVT
         ```bash
-
         # mint EVT
         npx evtc evt call mintEVT
         # you can get EVT_ADDRESS and EVTA_ADDRESS in log file
