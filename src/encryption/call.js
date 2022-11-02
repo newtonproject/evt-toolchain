@@ -21,6 +21,7 @@ const caller = {
         const privateKey = peer.computeSecret(genResult.node_swap_key, 'base64', 'hex')
         
         if(genResult) {
+            console.log("Prime: " + prime);
             console.log("Peer public key: " + pub);
             console.log("Peer private key: " + private);
             console.log("Node swap key: " + genResult.node_swap_key);
@@ -47,7 +48,7 @@ const caller = {
             key_id: key_id,
             contract_address: Buffer.from(CONTRACT_ADDRESS, 'utf-8'),
             nft_contract_address: Buffer.from(TOKEN_ADDRESS, 'utf-8'),
-            token_id: tokenId,
+            token_id: Number(tokenId),
             chain_id: Number(CHAIN_ID),
             rpc_url: Buffer.from(RPC_URL, 'utf-8'),
             private_key: private_key,
