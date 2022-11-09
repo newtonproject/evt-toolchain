@@ -35,17 +35,15 @@ https://explorer.testnet.newtonproject.org
 
 http://e.testnet.diynova.com
 
-### Get source code and Install
-    ```bash
+### Get source code and Install 
+```bash
+# install evt-toolchain
+npm install @newton-protocol/evt-toolchain
 
-    # install evt-toolchain
-    npm install @newton-protocol/evt-toolchain
-
-    # create .env file in your project root
-    touch .env
-    # set new CHAIN_ID, RPC_URL, PRIVATE_KEY in .env file
-    
-    ```
+# create .env file in your project root
+touch .env
+# set new CHAIN_ID, RPC_URL, PRIVATE_KEY in .env file
+```
 
 ### Use EVT and EVTA
 1. Deploy Contract
@@ -55,7 +53,6 @@ http://e.testnet.diynova.com
 2. Create
    1. EVT
         ```bash
-
         # mint EVT
         npx evtc evt call mintEVT
         # you can get EVT_ADDRESS and EVTA_ADDRESS in log file
@@ -84,7 +81,7 @@ You need some knowledge of Deffie-Hellman key exchange algorithm(DH algorithm) a
     # pull newkeeper-dev v0.3, version: 0.3
     docker pull pschy/newkeeper-dev:<version>
 
-    # run newkeeper with a PORT, PORT: 80, version: 0.3
+    # run newkeeper with a PORT(You need to change `PORT` to your local PORT), for example, `PORT`= 80, version: 0.3
     docker run -it -d -p `PORT`:8000 --name newkeeper pschy/newkeeper-dev:<version>
 
     # check status and get CONTAINER ID
@@ -93,7 +90,7 @@ You need some knowledge of Deffie-Hellman key exchange algorithm(DH algorithm) a
     # show logs
     docker logs -f `CONTAINER ID`
 
-    # set NEWKEEPER url in .env file 
+    # set NEWKEEPER url in .env file, for example: NEWKEEPER="http://127.0.0.1:`PORT`/"(`PORT`: Your Local Port)
     ```
 
 2. Deploy Contract
@@ -171,6 +168,7 @@ You need some knowledge of Deffie-Hellman key exchange algorithm(DH algorithm) a
 
             Get PrivateKey
         - params
+
             prime, peerSwapKey, KeyId
 
 
